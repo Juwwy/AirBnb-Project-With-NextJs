@@ -7,7 +7,7 @@ import MediumCard from '../components/MediumCard';
 import SmallCard from '../components/SmallCard';
 
 export default function Home({exploreData, cardsData}) {
-
+//console.log(checkData);
   return (
     <div className="">
       <Head>
@@ -63,11 +63,14 @@ export default function Home({exploreData, cardsData}) {
 export async function getStaticProps(){
   const exploreData = await fetch('https://links.papareact.com/pyp').then((res)=>res.json());
 
-  const cardsData = await fetch('https://links.papareact.com/zp1').then((res)=> res.json())
+  const cardsData = await fetch('https://links.papareact.com/zp1').then((res)=> res.json());
+   //checkData = await fetch('https://links.papareact.com/isz').then((res)=> res.json())
+
+  
 
   return {
     props:{
-      exploreData, cardsData
+      exploreData, cardsData, 
     }
   }
 }

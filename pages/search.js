@@ -40,7 +40,7 @@ const Search = ({checkData}) => {
                     ))}
                     </div>
                 </section>
-                <section className="hidden xl:inline-flex xl:min-w-[600px]">
+                <section className="hidden xl:inline-flex xl:min-w-[500px]">
                     <Map checkData={checkData}/>
                 </section>
             </main>

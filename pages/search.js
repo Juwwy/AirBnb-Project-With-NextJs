@@ -3,6 +3,7 @@ import Footer from "../components/Footer"
 import { useRouter } from "next/dist/client/router";
 import { format } from "date-fns";
 import InfoCard from "../components/InfoCard";
+import Map from "../components/Map";
 
 const Search = ({checkData}) => { 
     const router = useRouter();
@@ -38,6 +39,9 @@ const Search = ({checkData}) => {
                         <InfoCard key={img} img={img} location={location} description={description} title={title} star={star} price={price} total={total} />
                     ))}
                     </div>
+                </section>
+                <section className="hidden xl:inline-flex xl:min-w-[600px]">
+                    <Map checkData={checkData}/>
                 </section>
             </main>
 
